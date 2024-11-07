@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Z-Gen by PremiumBayy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <!-- <link rel="stylesheet" href="css/FinalizeDietReportPreivew.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" style="padding-top: 110px;">
+            <div class="content">
+                <div class="content__container">
+                    <p class="content__container__text">
+                    Z
+                    </p>
+
+                    <ul class="content__container__list">
+                        <li class="content__container__list__item">    - Bill</li>
+                        <li class="content__container__list__item">    - Quote</li>
+                        <li class="content__container__list__item">    - Bill</li>
+                        <li class="content__container__list__item">    - Quote</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col s2 m2"></div>
+            <div class="col s4 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img id="img_link" onclick="invoice()" class="activator responsive-img" src="img/invoice.png">
+                    </div>
+                    <div class="card-content" style="padding: 15px;">
+                        <span class="card-title grey-text text-darken-4" id="gen_tit">Invoice<i class="material-icons right"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img id="img_link" onclick="quote()" class="activator responsive-img" src="img/quote.png">
+                    </div>
+                    <div class="card-content" style="padding: 15px;">
+                        <span class="card-title grey-text text-darken-4" id="gen_tit">Quotation<i class="material-icons right"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col s2 m2"></div>
+        </div>
+    </div>
+
+    <footer id="footer-area">
+        <div class="container">
+            <div class="copyright text-center">
+                <p>Copyright @ 2018
+                    <a href="https://www.premiumbayy.com">PremiumBayy - Tech Support </a>© 2024 all right reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <!-- ************************************************************************************************************* -->
+
+    <script>
+        function invoice() {
+            window.open('invoice.html', '_blank');
+        }
+
+        function quote() {
+            window.open('quotation.html', '_blank');
+        }
+    </script>
+</body>
+
+</html>

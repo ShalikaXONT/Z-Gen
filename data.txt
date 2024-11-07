@@ -1,0 +1,237 @@
+var ib_invoice_data = function(){/*
+#=========================================================================================================
+
+
+### Company data
+
+[{company_name}]
+EzSoft Technologies (Private) Limited.
+
+[{company_address}]
+90, Matale Road, Naula.
+
+[{company_city_zip_state}]
++94 (0) 662 246 011
+
+[{company_phone_fax}]
++94 (0) 757 183 449, +94 (0) 1234569
+
+[{company_email_web}]
+www.ezsoft.lk | ezsoftlk@gmail.com
+
+[{payment_info1}]
+
+
+[{payment_info2}]
+
+
+[{payment_info3}]
+
+
+[{payment_info4}]
+SWIFT:BOA447
+
+[{payment_info5}]
+
+
+[{issue_date_label}]
+Issue Date:
+
+[{issue_date}]
+
+
+[{net_term_label}]
+Net:
+
+[{net_term}]
+21
+
+[{due_date_label}]
+Due Date:
+
+[{due_date}]
+
+
+[{currency_label}]
+Currency:
+
+[{currency}]
+LKR
+
+[{po_number_label}]
+
+
+[{po_number}]
+
+
+[{bill_to_label}]
+Client :            
+
+[{client_name}]
+
+
+[{client_address}]
+
+
+[{client_city_zip_state}]
+
+
+[{client_phone_fax}]
+
+
+[{client_email}]
+
+
+[{client_other}]
+
+
+[{invoice_title}]
+INVOICE
+
+[{invoice_number}]
+#1
+
+[{item_row_number_label}]
+
+
+[{item_description_label}]
+Item
+
+[{item_quantity_label}]
+Quantity
+
+[{item_price_label}]
+Price
+
+[{item_discount_label}]
+Discount
+
+[{item_tax_label}]
+Tax
+
+[{item_line_total_label}]
+Linetotal
+
+[{item_row_number}]
+
+
+[{item_description}]
+
+
+[{item_quantity}]
+
+
+[{item_price}]
+
+
+[{item_discount}]
+
+
+[{item_tax}]
+
+
+[{item_line_total}]
+
+
+[{amount_subtotal_label}]
+Subtotal:
+
+[{amount_subtotal}]
+
+
+[{tax_name}]
+Tax:
+
+[{tax_value}]
+
+
+[{amount_total_label}]
+Total:
+
+[{amount_total}]
+
+[{amount_due_label}]
+Amount Due:
+
+[{amount_due}]
+
+
+[{terms_label}]
+Terms & Notes
+
+[{terms}]
+Warranty covers only manufacture defects. The warranty does not cover damage caused such as power failures, lightning or environmental defects. Virus attack or System failures are not included for warranty claims.
+
+
+### Settings
+
+# One of 'dd/mm/yyyy', 'dd-mm-yyyy', 'dd.mm.yyyy', 'mm/dd/yyyy', 'mm-dd-yyyy', 'mm.dd.yyyy', 'yyyy mm dd', 'yyyy-mm-dd', 'yyyy.mm.dd'
+[date_format]
+mm/dd/yyyy
+
+# One of 'left' or 'right'
+[currency_position]
+left
+
+[show_currency]
+true
+
+# One of '0,000.00', '0 000.00', '0000.00', '0.000,00', '0 000,00', '0000,00'
+[number_format]
+0,000.00
+
+[default_columns]
+item_row_number,item_description,item_quantity,item_price,item_discount,item_tax,item_line_total
+
+[default_quantity]
+1
+
+[default_price]
+0
+
+[default_discount]
+0
+
+[default_tax]
+0
+
+[default_number_rows]
+0
+
+[auto_calculate_dates]
+true
+
+[load_items]
+true
+
+[invoicebus_fineprint]
+false
+
+
+### Items (in this order item_description@||@item_quantity@||@item_price@||@item_discount@||@item_tax)
+
+[items]
+
+
+
+### Custom data (in format field_name@||@field_value)
+
+# Document custom data
+[document_custom]
+
+
+# Client custom data
+[client_custom]
+
+
+
+### Logo
+
+# base64 encoded data URI of PNG image
+
+
+
+
+
+#=========================================================================================================
+*/}
