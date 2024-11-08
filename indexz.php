@@ -1,3 +1,4 @@
+<form action="save_invoice.php" method="POST">
 <!DOCTYPE html>
 
 <html lang="en">
@@ -191,7 +192,6 @@
         lightning or environmental defects. Virus attack or System failures are not included for warranty claims.</div>
 
       <div id="about" style="text-align: center;">This is a System Generated Invoice by PremiumBayy - Tech Support @ 2024</div>
-      <button>Hello</button>
 
     </section>
   </div>
@@ -202,44 +202,47 @@
   </script>
 
 <script>
-  document.getElementById("ib_save_online").addEventListener("click", function () {
-    // Gather the data
+  function saveInvoice() {
     const invoiceData = {
-      company_info: document.querySelector('.company-info').innerText,
-      payment_info: document.querySelector('.payment-info').innerText,
-      issue_date: "{issue_date}", // Update dynamically as needed
+      issue_date: "{issue_date}",
       net_term: "{net_term}",
-      due_date: "{due_date_label}",
+      due_date: "{due_date}",
       client_name: "{client_name}",
       client_address: "{client_address}",
-      item_description: "{item_description}",
-      item_quantity: "{item_quantity}",
-      item_price: "{item_price}",
-      item_discount: "{item_discount}",
-      item_tax: "{item_tax}",
-      item_line_total: "{item_line_total}",
-      amount_subtotal: "{amount_subtotal}",
-      tax_value: "{tax_value}",
-      amount_total: "{amount_total}",
-      amount_due: "{amount_due}"
+      subtotal: "{amount_subtotal}",
+      tax: "{tax_value}",
+      total: "{amount_total}",
+      amount_due: "{amount_due}",
+      terms: "Warranty covers only manufacture defects...",
+      items: [
+        {
+          description: "{item_description}",
+          quantity: "{item_quantity}",
+          price: "{item_price}",
+          discount: "{item_discount}",
+          tax: "{item_tax}",
+          line_total: "{item_line_total}"
+        }
+        // Add more items if applicable
+      ]
     };
 
-    // Send the data to PHP
     fetch("save_invoice.php", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(invoiceData)
     })
-    .then(response => response.text())
-    .then(data => {
-      alert("Invoice saved successfully!");
-    })
-    .catch(error => console.error("Error:", error));
-  });
+      .then(response => response.json())
+      .then(data => {
+        if (data.status === "success") {
+          alert("Invoice saved with ID: " + data.invoice_id);
+        } else {
+          alert("Error: " + data.message);
+        }
+      })
+      .catch(error => console.error("Error:", error));
+  }
 </script>
-
 
 
   <script src="http://cdn.invoicebus.com/generator/generator.min.js?data=true"></script>
@@ -247,3 +250,21 @@
 </body>
 
 </html>
+  <input type="hidden" name="issue_date" value="{issue_date}">
+  <input type="hidden" name="net_term" value="{net_term}">
+  <input type="hidden" name="due_date" value="{due_date}">
+  <input type="hidden" name="client_name" value="{client_name}">
+  <input type="hidden" name="client_address" value="{client_address}">
+  <input type="hidden" name="item_description" value="{item_description}">
+  <input type="hidden" name="item_quantity" value="{item_quantity}">
+  <input type="hidden" name="item_price" value="{item_price}">
+  <input type="hidden" name="item_discount" value="{item_discount}">
+  <input type="hidden" name="item_tax" value="{item_tax}">
+  <input type="hidden" name="item_line_total" value="{item_line_total}">
+  <input type="hidden" name="amount_subtotal" value="{amount_subtotal}">
+  <input type="hidden" name="tax_value" value="{tax_value}">
+  <input type="hidden" name="amount_total" value="{amount_total}">
+  <input type="hidden" name="amount_due" value="{amount_due}">
+  
+  <button type="submit">Save Invoice</button>
+</form>
