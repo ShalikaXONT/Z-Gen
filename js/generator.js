@@ -1,3 +1,4 @@
+/*! Invoice Template Generator @author: Invoicebus @email: info@invoicebus.com @web: https://invoicebus.com @version: 1.0.0 @updated: 2017-11-17 13:11:59 @license: MIT */
 /**
  * Invoice Template Generator by Invoicebus
  */
@@ -20,7 +21,7 @@
     {
       var src = scripts[i].src;
 
-      var idx = src.indexOf('generator' + MIN + '.js');
+      var idx = src.indexOf('generator' + '.js');
       if(idx > -1)
       {
         return src.substring(0, idx);
@@ -33,9 +34,9 @@
    */
   var BLANK_GIF = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
 
-      TRACKING  = '@@TRACKING',
-      SAVE_URL  = '@@SAVE_URL',
-      MIN       = '@@MIN',
+      TRACKING  = '?utm_source=generator&utm_medium=template&utm_campaign=invoicebus_templates',
+      SAVE_URL  = 'https://invoicebus.com/saveinvoice/',
+      MIN       = '',
 
       // Get the path of the generator script
       PATH      = ib_getGeneratorScriptPath(),
@@ -428,22 +429,22 @@
     'de': {
       long_name: 'Deutsch',
       long_name_en: 'German',
-      change_lang: 'Ändern sie die sprache auf Deutsch',
+      change_lang: 'Ã„ndern sie die sprache auf Deutsch',
       print: 'Drucken',
       invoice: 'Rechnung',
-      print_info: 'Dieser befehl wird auch zu speichern<br/>die rechnung als PDF verwendet. Siehe FAQ für weitere informationen.',
+      print_info: 'Dieser befehl wird auch zu speichern<br/>die rechnung als PDF verwendet. Siehe FAQ fÃ¼r weitere informationen.',
       highlight: 'Markieren',
       highlight_info: 'Markieren sie editierbaren felder',
-      open_data: 'Öffnen',
-      open_data_info: 'Öffnen sie bereits gespeicherte daten.<br>Die datei muss von demselben speicherort<br>wie template.html geladen werden',
-      text_format_alert: 'Bitte laden sie die textdatei hoch. Das unterstützte format ist .txt',
+      open_data: 'Ã–ffnen',
+      open_data_info: 'Ã–ffnen sie bereits gespeicherte daten.<br>Die datei muss von demselben speicherort<br>wie template.html geladen werden',
+      text_format_alert: 'Bitte laden sie die textdatei hoch. Das unterstÃ¼tzte format ist .txt',
       save_state: 'Sicherer Staat',
       save_online: 'Speichern Online',
-      save_info: 'Speichern des aktuellen rechnungsdaten wie<br/>firmenadresse, logo usw. Für zukünftige nutzung',
+      save_info: 'Speichern des aktuellen rechnungsdaten wie<br/>firmenadresse, logo usw. FÃ¼r zukÃ¼nftige nutzung',
       online: 'Online',
       online_info: 'Sie werden auf Invoicebus website<br>genommen werden, um diese rechnung online zu speichern',
-      account_info: 'Sie müssen Invoicebus konto diese rechnung zu sparen',
-      about: 'Über',
+      account_info: 'Sie mÃ¼ssen Invoicebus konto diese rechnung zu sparen',
+      about: 'Ãœber',
       faq: 'FAQ',
       got_it: 'OK, habe es',
       crafted_by: 'Mit &#x2764; hergestellt von',
@@ -457,16 +458,16 @@
       discount: 'Rabatt',
       tax: 'Steuer',
       line_total: 'Gesamt',
-      insert_row: 'Zeile einfügen',
+      insert_row: 'Zeile einfÃ¼gen',
       remove_row: 'Entfernen reihe',
       drag_to_reorder: 'Ziehen zum neuanordnen',
-      logo_upload_tooltip: 'Drop-bild oder klicken sie ihr logo (max 2 MB) hochladen.<br>Für eine bessere druckauflösung größeres bild zu verwenden,<br>wie es automatisch verkleinert wird.',
+      logo_upload_tooltip: 'Drop-bild oder klicken sie ihr logo (max 2 MB) hochladen.<br>FÃ¼r eine bessere druckauflÃ¶sung grÃ¶ÃŸeres bild zu verwenden,<br>wie es automatisch verkleinert wird.',
       drop_logo: 'Lassen sie ihr logo hier',
       remove_logo: 'Logo entfernen',
-      image_format_alert: 'Bitte laden sie die bilddatei hoch. Unterstützte formate sind .png, .jpg und .gif',
-      image_too_big_alert: 'Datei zu groß, maximale größe 2mb',
-      currency_left: 'Zeigen währung auf der linken seite',
-      currency_right: 'Zeigen währung auf der rechten seite',
+      image_format_alert: 'Bitte laden sie die bilddatei hoch. UnterstÃ¼tzte formate sind .png, .jpg und .gif',
+      image_too_big_alert: 'Datei zu groÃŸ, maximale grÃ¶ÃŸe 2mb',
+      currency_left: 'Zeigen wÃ¤hrung auf der linken seite',
+      currency_right: 'Zeigen wÃ¤hrung auf der rechten seite',
       company_name_tooltip: 'Geben sie den namen ihres unternehmens',
       company_address_tooltip: 'Geben sie firmenadresse',
       company_city_zip_state_tooltip: 'Geben sie unternehmens zip, stadt und land',
@@ -478,13 +479,13 @@
       payment_info4_tooltip: 'Geben sie eine andere zahlungsdetails',
       payment_info5_tooltip: 'Geben sie eine andere zahlungsdetails',
       issue_date_label_tooltip: 'Geben sie ausgabetag label',
-      issue_date_tooltip: 'Wählen sie rechnungs ausgabetag',
+      issue_date_tooltip: 'WÃ¤hlen sie rechnungs ausgabetag',
       net_term_label_tooltip: 'Geben sie net tage label',
       net_term_tooltip: 'Geben sie rechnung netto tage',
-      due_date_label_tooltip: 'Geben sie rechnung fälligkeit etikett',
-      due_date_tooltip: 'Wählen sie rechnungsfälligkeitsdatum',
-      currency_label_tooltip: 'Geben sie rechnungswährung etikett',
-      currency_tooltip: 'Geben sie rechnungswährung',
+      due_date_label_tooltip: 'Geben sie rechnung fÃ¤lligkeit etikett',
+      due_date_tooltip: 'WÃ¤hlen sie rechnungsfÃ¤lligkeitsdatum',
+      currency_label_tooltip: 'Geben sie rechnungswÃ¤hrung etikett',
+      currency_tooltip: 'Geben sie rechnungswÃ¤hrung',
       po_number_label_tooltip: 'Geben sie P.O. etikette',
       po_number_tooltip: 'Geben sie P.O. nummer',
       bill_to_label_tooltip: 'Geben sie rechnung zu beschriften',
@@ -524,16 +525,16 @@
       terms_tooltip: 'Geben sie rechnungskonditionen und notizen'
     },
     'es': {
-      long_name: 'Español',
+      long_name: 'EspaÃ±ol',
       long_name_en: 'Spanish',
-      change_lang: 'Cambiar el idioma a Español',
-      print: 'Impresión',
+      change_lang: 'Cambiar el idioma a EspaÃ±ol',
+      print: 'ImpresiÃ³n',
       invoice: 'Factura',
       print_info: 'Este comando tambien se utiliza para guardar<br/>la factura en PDF. Ve FAQ para mas informacion.',
       highlight: 'Destaca',
       highlight_info: 'Destaca los campos modificables',
       open_data: 'Abierto',
-      open_data_info: 'Abrir datos ya guardados.<br>El archivo debe ser cargado desde la<br>misma ubicación que template.html',
+      open_data_info: 'Abrir datos ya guardados.<br>El archivo debe ser cargado desde la<br>misma ubicaciÃ³n que template.html',
       text_format_alert: 'Por favor, sube archivo de texto. Formato soportado es .txt',
       save_state: 'Guardar Estado',
       save_online: 'Guardar Online',
@@ -549,7 +550,7 @@
       add_new_row: 'Anade nueva fila',
       configure_columns: 'Configura columnas',
       row_number: 'Numero de fila',
-      description: 'Artículo',
+      description: 'ArtÃ­culo',
       quantity: 'Cantidad',
       price: 'Precio',
       discount: 'Descuento',
@@ -562,7 +563,7 @@
       drop_logo: 'Arrastre tu logotipo aqui',
       remove_logo: 'Elimina tu logotipo',
       image_format_alert: 'Por favor, cargar el archivo de imagen. Los formatos soportados son .png, .jpg .gif ang',
-      image_too_big_alert: 'El archivo es demasiado grande, el tamaño máximo es de 2MB',
+      image_too_big_alert: 'El archivo es demasiado grande, el tamaÃ±o mÃ¡ximo es de 2MB',
       currency_left: 'Mostra moneda a la izquierda',
       currency_right: 'Mostra moneda a la derecha',
       company_name_tooltip: 'Rellena con el nombre de la empresa',
@@ -631,8 +632,8 @@
       highlight: 'Evidenzia',
       highlight_info: 'Seleziona i campi modificabili',
       open_data: 'Aperto',
-      open_data_info: 'Aprire i dati già salvati.<br>Il file deve essere caricato dalla<br>stessa posizione come template.html',
-      text_format_alert: 'Si prega di caricare file di testo. formato supportato è .txt',
+      open_data_info: 'Aprire i dati giÃ  salvati.<br>Il file deve essere caricato dalla<br>stessa posizione come template.html',
+      text_format_alert: 'Si prega di caricare file di testo. formato supportato Ã¨ .txt',
       save_state: 'Salva Stato Della',
       save_online: 'Salva Online',
       save_info: 'Salva i dati di fattura attuali come<br/>indirizzo dell\'azienda, logo, ecc., per un riutilizzo futuro',
@@ -648,7 +649,7 @@
       configure_columns: 'Configure colonne',
       row_number: 'Numero di riga',
       description: 'Articolo',
-      quantity: 'Quantità',
+      quantity: 'QuantitÃ ',
       price: 'Prezzo',
       discount: 'Sconto',
       tax: 'Tasse',
@@ -660,7 +661,7 @@
       drop_logo: 'Rilascia il tuo logo qui',
       remove_logo: 'Rimuovere logo',
       image_format_alert: 'Si prega di caricare file di immagine. I formati supportati sono .png, .jpg ang .gif',
-      image_too_big_alert: 'File troppo grande, la dimensione massima è di 2MB',
+      image_too_big_alert: 'File troppo grande, la dimensione massima Ã¨ di 2MB',
       currency_left: 'Mostra la valuta alla sinistra',
       currency_right: 'Mostra la valuta alla destra',
       company_name_tooltip: 'Inserisci il nome della tua azienda',
@@ -720,101 +721,101 @@
       terms_tooltip: 'Inserisci condizioni e note della fattura'
     },
     'fr': {
-      long_name: 'Français',
+      long_name: 'FranÃ§ais',
       long_name_en: 'French',
-      change_lang: 'Changer la langue Française',
+      change_lang: 'Changer la langue FranÃ§aise',
       print: 'Imprimer',
       invoice: 'Facture',
-      print_info: 'Cette commande est aussi utilisée pour sauvegarder<br/>la facture sous forme PDF. Consultez FAQ pour plus d\'infos.',
+      print_info: 'Cette commande est aussi utilisÃ©e pour sauvegarder<br/>la facture sous forme PDF. Consultez FAQ pour plus d\'infos.',
       highlight: 'Marque',
       highlight_info: 'Mettre en relief les champs modifiables',
       open_data: 'Ouvrir',
-      open_data_info: 'Ouvrez les données déjà enregistrées.<br>Le fichier doit être chargé à partir<br>du même emplacement que template.html',
-      text_format_alert: 'S\'il vous plaît télécharger le fichier texte. Format pris en charge est .txt',
-      save_state: 'Enregistrer L\'état',
+      open_data_info: 'Ouvrez les donnÃ©es dÃ©jÃ  enregistrÃ©es.<br>Le fichier doit Ãªtre chargÃ© Ã  partir<br>du mÃªme emplacement que template.html',
+      text_format_alert: 'S\'il vous plaÃ®t tÃ©lÃ©charger le fichier texte. Format pris en charge est .txt',
+      save_state: 'Enregistrer L\'Ã©tat',
       save_online: 'Enregistrer en Ligne',
-      save_info: 'Enregistrer les données actuelles de la facture telles que<br/>adresse de l\'entreprise, logo, etc., pour un futur réemploi',
+      save_info: 'Enregistrer les donnÃ©es actuelles de la facture telles que<br/>adresse de l\'entreprise, logo, etc., pour un futur rÃ©emploi',
       online: 'En ligne',
-      online_info: 'Vous serez réorienté vers le site de Invoicebus website<br>sauvegarder cette facture en ligne',
+      online_info: 'Vous serez rÃ©orientÃ© vers le site de Invoicebus website<br>sauvegarder cette facture en ligne',
       account_info: 'Vous avez besoin d\'un compte Invoicebus pour sauvegarder cette facture',
       about: 'Pour',
       faq: 'FAQ',
       got_it: 'OK, compris',
-      crafted_by: 'Conçu avec &#x2764; par',
-      invoicebus_mechanics: 'La Mécanique Invoicebus',
+      crafted_by: 'ConÃ§u avec &#x2764; par',
+      invoicebus_mechanics: 'La MÃ©canique Invoicebus',
       add_new_row: 'Ajouter ligne',
       configure_columns: 'Configurer colonnes',
-      row_number: 'Numéro de ligne',
+      row_number: 'NumÃ©ro de ligne',
       description: 'Article',
-      quantity: 'Quantité',
+      quantity: 'QuantitÃ©',
       price: 'Prix',
-      discount: 'Réduction',
+      discount: 'RÃ©duction',
       tax: 'Taxe',
       line_total: 'Total',
-      insert_row: 'Insérer ligne',
+      insert_row: 'InsÃ©rer ligne',
       remove_row: 'Supprimer ligne',
-      drag_to_reorder: 'Tirer pour réorganiser',
-      logo_upload_tooltip: 'Laisser tomber l\'image ou cliquer pour télécharger votre logo (max 2MB).<br>Pour une meilleure résolution d\'impression utiliser un image plus large,<br>comme c\'est automatiquement réduit.',
+      drag_to_reorder: 'Tirer pour rÃ©organiser',
+      logo_upload_tooltip: 'Laisser tomber l\'image ou cliquer pour tÃ©lÃ©charger votre logo (max 2MB).<br>Pour une meilleure rÃ©solution d\'impression utiliser un image plus large,<br>comme c\'est automatiquement rÃ©duit.',
       drop_logo: 'Laisser tomber votre logo ici',
       remove_logo: 'Supprimer logo',
-      image_format_alert: 'S\'il vous plaît télécharger le fichier d\'image. Les formats supportés sont .png, .jpg ang .gif',
+      image_format_alert: 'S\'il vous plaÃ®t tÃ©lÃ©charger le fichier d\'image. Les formats supportÃ©s sont .png, .jpg ang .gif',
       image_too_big_alert: 'Fichier trop grand, la taille maximale est de 2MB',
-      currency_left: 'Montrer la monnaie à gauche',
-      currency_right: 'Montrer la monnaie à droite',
+      currency_left: 'Montrer la monnaie Ã  gauche',
+      currency_right: 'Montrer la monnaie Ã  droite',
       company_name_tooltip: 'Entrer le nom de votre entreprise',
       company_address_tooltip: 'Entrer l\'adresse de votre entreprise',
       company_city_zip_state_tooltip: 'Entrer le code postale, la ville et le pays de votre entreprise',
-      company_phone_fax_tooltip: 'Entrer les numéros de téléphone de votre entreprise',
+      company_phone_fax_tooltip: 'Entrer les numÃ©ros de tÃ©lÃ©phone de votre entreprise',
       company_email_web_tooltip: 'Entrer le site internet et le courriel de votre entreprise',
-      payment_info1_tooltip: 'Entrer les détails de votre paiement',
-      payment_info2_tooltip: 'Entrer d\'autres détails de paiement',
-      payment_info3_tooltip: 'Entrer d\'autres détails de paiement',
-      payment_info4_tooltip: 'Entrer d\'autres détails de paiement',
-      payment_info5_tooltip: 'Entrer d\'autres détails de paiement',
-      issue_date_label_tooltip: 'Entrer l\'étiquette de la date de délivrance',
-      issue_date_tooltip: 'Sélectionner la date de délivrance de la facture',
-      net_term_label_tooltip: 'Entrer l\'étiquette des jours nets',
+      payment_info1_tooltip: 'Entrer les dÃ©tails de votre paiement',
+      payment_info2_tooltip: 'Entrer d\'autres dÃ©tails de paiement',
+      payment_info3_tooltip: 'Entrer d\'autres dÃ©tails de paiement',
+      payment_info4_tooltip: 'Entrer d\'autres dÃ©tails de paiement',
+      payment_info5_tooltip: 'Entrer d\'autres dÃ©tails de paiement',
+      issue_date_label_tooltip: 'Entrer l\'Ã©tiquette de la date de dÃ©livrance',
+      issue_date_tooltip: 'SÃ©lectionner la date de dÃ©livrance de la facture',
+      net_term_label_tooltip: 'Entrer l\'Ã©tiquette des jours nets',
       net_term_tooltip: 'Entrer la facture des jours nets',
-      due_date_label_tooltip: 'Entrer l\'étiquette de la date limite de la facture',
-      due_date_tooltip: 'Sélectionner la date limite de la facture',
-      currency_label_tooltip: 'Entrer l\'étiquette de la monnaie de la facture',
+      due_date_label_tooltip: 'Entrer l\'Ã©tiquette de la date limite de la facture',
+      due_date_tooltip: 'SÃ©lectionner la date limite de la facture',
+      currency_label_tooltip: 'Entrer l\'Ã©tiquette de la monnaie de la facture',
       currency_tooltip: 'Entrer la monnaie de la facture',
-      po_number_label_tooltip: 'Entrer l\'étiquette de l\'ordre d\'achat',
+      po_number_label_tooltip: 'Entrer l\'Ã©tiquette de l\'ordre d\'achat',
       po_number_tooltip: 'Entrer le nombre de l\'ordre d\'achat',
-      bill_to_label_tooltip: 'Enter l\'étiquette de la facture',
+      bill_to_label_tooltip: 'Enter l\'Ã©tiquette de la facture',
       client_name_tooltip: 'Entrer le nom du client ',
       client_address_tooltip: 'Enter l\'adresse du client ',
       client_city_zip_state_tooltip: 'Enter la ville,le code postal et le pays du client',
-      client_phone_fax_tooltip: 'Entrer le numéro de téléphone et de fax du client',
+      client_phone_fax_tooltip: 'Entrer le numÃ©ro de tÃ©lÃ©phone et de fax du client',
       client_email_tooltip: 'Entrer le courrier du client',
       client_other_tooltip: 'Entrer d\'autres infos sur le client info',
       invoice_title_tooltip: 'Entrer le titre de facture',
-      invoice_number_tooltip: 'Entrer le numéro de facture',
+      invoice_number_tooltip: 'Entrer le numÃ©ro de facture',
       item_row_number_label_tooltip: '',
-      item_description_label_tooltip: 'Entrer l\'en-tête de l\'article',
-      item_quantity_label_tooltip: 'Entrer l\'en-tête de la quantité',
-      item_price_label_tooltip: 'Entrerl\'en-tête du prix',
-      item_discount_label_tooltip: 'Entrer l\'en-tête de la réduction',
-      item_tax_label_tooltip: 'Entrer l\'en-tête de la taxe',
-      item_line_total_label_tooltip: 'Entrer l\'en-tête du total de la ligne',
+      item_description_label_tooltip: 'Entrer l\'en-tÃªte de l\'article',
+      item_quantity_label_tooltip: 'Entrer l\'en-tÃªte de la quantitÃ©',
+      item_price_label_tooltip: 'Entrerl\'en-tÃªte du prix',
+      item_discount_label_tooltip: 'Entrer l\'en-tÃªte de la rÃ©duction',
+      item_tax_label_tooltip: 'Entrer l\'en-tÃªte de la taxe',
+      item_line_total_label_tooltip: 'Entrer l\'en-tÃªte du total de la ligne',
       item_row_number_tooltip: '',
       item_description_tooltip: 'Entrer la description de l\'article',
-      item_quantity_tooltip: 'Entrer la quantité',
+      item_quantity_tooltip: 'Entrer la quantitÃ©',
       item_price_tooltip: 'Entrer le  prix',
-      item_discount_tooltip: 'Entrer la réduction',
+      item_discount_tooltip: 'Entrer la rÃ©duction',
       item_tax_tooltip: 'Entrer la taxe',
       item_line_total_tooltip: '',
-      amount_subtotal_label_tooltip: 'Entrer l\'étiquette du total partiel',
+      amount_subtotal_label_tooltip: 'Entrer l\'Ã©tiquette du total partiel',
       amount_subtotal_tooltip: '',
-      tax_name_tooltip: 'Entrer l\'étiquette de la taxe',
+      tax_name_tooltip: 'Entrer l\'Ã©tiquette de la taxe',
       tax_value_tooltip: '',
-      amount_total_label_tooltip: 'Entrer l\'étiquette du total ',
+      amount_total_label_tooltip: 'Entrer l\'Ã©tiquette du total ',
       amount_total_tooltip: '',
-      amount_paid_label_tooltip: 'Entrer l\'étiquette du montant payé',
-      amount_paid_tooltip: 'Entrer le montant payé',
-      amount_due_label_tooltip: 'Entrer l\'étiquette du montant dû',
+      amount_paid_label_tooltip: 'Entrer l\'Ã©tiquette du montant payÃ©',
+      amount_paid_tooltip: 'Entrer le montant payÃ©',
+      amount_due_label_tooltip: 'Entrer l\'Ã©tiquette du montant dÃ»',
       amount_due_tooltip: '',
-      terms_label_tooltip: 'Entrer l\'étiquette des termes et des notes ',
+      terms_label_tooltip: 'Entrer l\'Ã©tiquette des termes et des notes ',
       terms_tooltip: 'Entrer les termes et les notes de la facture'
     }
   };
@@ -856,9 +857,9 @@
                     '<ib-span class="ib_clear_xsmall"></ib-span>' +
 
                     '<ib-span class="ib_gray_link ib_how_to_link ib_pull_right" data-toggle="modal" data-target="#ib_howToModal">' + ib_languages[ib_lang].about + '</ib-span>' +
-                    '<ib-span class="ib_top_separator ib_pull_right">●</ib-span>' +
+                    '<ib-span class="ib_top_separator ib_pull_right">â—</ib-span>' +
                     '<ib-span class="ib_gray_link ib_how_to_link ib_pull_right" onclick="window.open(\'https://groups.google.com/d/forum/html-invoice-generator\', \'_blank\')">' + ib_languages[ib_lang].faq + '</ib-span>' +
-                    '<ib-span class="ib_top_separator ib_pull_right">●</ib-span>' +
+                    '<ib-span class="ib_top_separator ib_pull_right">â—</ib-span>' +
                     
                     ib_generateLanguageSelect() +
 
@@ -932,7 +933,7 @@
     });
 
     $(document.body)
-      .after($('<ib-span class="ib_invoicebus_fineprint">Receive online payments for your invoices at <a href="https://invoicebus.com">invoicebus.com</a></ib-span>'));
+      .after($('<ib-span class="ib_invoicebus_fineprint">Receive online payments through your invoices at <ib-span onclick="window.open(\'https://invoicebus.com\', \'_blank\')">invoicebus.com</ib-span></ib-span>'));
 
     if(!JSON.parse(ib_data.invoicebus_fineprint))
       $('.ib_invoicebus_fineprint').css('visibility', 'hidden');
@@ -2358,18 +2359,18 @@
 
   var ib_raw_currencies = 
     // name,symbol,code,priority
-    'Afghan afghani,؋,AFN,255;' +
+    'Afghan afghani,Ø‹,AFN,255;' +
     'Albanian lek,L,ALL,255;' +
-    'Algerian dinar,د.ج,DZD,255;' +
+    'Algerian dinar,Ø¯.Ø¬,DZD,255;' +
     'Angolan kwanza,Kz,AOA,255;' +
     'Argentine peso,$,ARS,255;' +
-    'Armenian dram,դր.,AMD,255;' +
-    'Aruban florin,ƒ,AWG,255;' +
+    'Armenian dram,Õ¤Ö€.,AMD,255;' +
+    'Aruban florin,Æ’,AWG,255;' +
     'Australian dollar,$,AUD,3;' +
     'Azerbaijani manat,man.,AZN,255;' +
     'Bahamian dollar,$,BSD,255;' +
-    'Bahraini dinar,.د.ب,BHD,255;' +
-    'Bangladeshi taka,৳,BDT,255;' +
+    'Bahraini dinar,.Ø¯.Ø¨,BHD,255;' +
+    'Bangladeshi taka,à§³,BDT,255;' +
     'Barbadian dollar,$,BBD,255;' +
     'Belarusian ruble,Br,BYR,255;' +
     'Belize dollar,$,BZD,255;' +
@@ -2379,41 +2380,41 @@
     'Bosnia and Herzegovina convertible mark,KM,BAM,255;' +
     'Botswana pula,P,BWP,255;' +
     'Brazilian real,R$,BRL,255;' +
-    'British pound,£,GBP,5;' +
+    'British pound,Â£,GBP,5;' +
     'Brunei dollar,$,BND,255;' +
-    'Bulgarian lev,лв,BGN,255;' +
+    'Bulgarian lev,Ð»Ð²,BGN,255;' +
     'Burundian franc,Fr,BIF,255;' +
-    'Cambodian riel,៛,KHR,255;' +
+    'Cambodian riel,áŸ›,KHR,255;' +
     'Canadian dollar,$,CAD,2;' +
     'Cape Verdean escudo,$,CVE,255;' +
     'Cayman Islands dollar,$,KYD,255;' +
     'Central African CFA franc,Fr,XAF,255;' +
     'CFP franc,Fr,XPF,255;' +
     'Chilean peso,$,CLP,255;' +
-    'Chinese yuan,¥,CNY,255;' +
+    'Chinese yuan,Â¥,CNY,255;' +
     'Colombian peso,$,COP,255;' +
     'Comorian franc,Fr,KMF,255;' +
     'Congolese franc,Fr,CDF,255;' +
-    'Costa Rican colón,₡,CRC,255;' +
+    'Costa Rican colÃ³n,â‚¡,CRC,255;' +
     'Croatian kuna,kn,HRK,255;' +
     'Cuban convertible peso,$,CUC,255;' +
     'Cuban peso,$,CUP,255;' +
-    'Czech koruna,Kč,CZK,255;' +
+    'Czech koruna,KÄ,CZK,255;' +
     'Danish krone,kr,DKK,255;' +
     'Djiboutian franc,Fr,DJF,255;' +
     'Dominican peso,$,DOP,255;' +
     'East Caribbean dollar,$,XCD,255;' +
-    'Egyptian pound,£,EGP,255;' +
+    'Egyptian pound,Â£,EGP,255;' +
     'Eritrean nakfa,Nfk,ERN,255;' +
     'Estonian kroon[B],kr,EEK,255;' +
     'Ethiopian birr,Br,ETB,255;' +
-    'Euro,€,EUR,4;' +
-    'Falkland Islands pound,£,FKP,255;' +
+    'Euro,â‚¬,EUR,4;' +
+    'Falkland Islands pound,Â£,FKP,255;' +
     'Fijian dollar,$,FJD,255;' +
     'Gambian dalasi,D,GMD,255;' +
-    'Georgian lari,ლ,GEL,255;' +
-    'Ghanaian cedi,₵,GHS,255;' +
-    'Gibraltar pound,£,GIP,255;' +
+    'Georgian lari,áƒš,GEL,255;' +
+    'Ghanaian cedi,â‚µ,GHS,255;' +
+    'Gibraltar pound,Â£,GIP,255;' +
     'Guatemalan quetzal,Q,GTQ,255;' +
     'Guinean franc,Fr,GNF,255;' +
     'Guyanese dollar,$,GYD,255;' +
@@ -2421,100 +2422,100 @@
     'Honduran lempira,L,HNL,255;' +
     'Hong Kong dollar,$,HKD,255;' +
     'Hungarian forint,Ft,HUF,255;' +
-    'Icelandic króna,kr,ISK,255;' +
-    'Indian rupee,₹,INR,255;' +
+    'Icelandic krÃ³na,kr,ISK,255;' +
+    'Indian rupee,â‚¹,INR,255;' +
     'Indonesian rupiah,Rp,IDR,255;' +
-    'Iranian rial,﷼,IRR,255;' +
-    'Iraqi dinar,ع.د,IQD,255;' +
-    'Israeli new shekel,₪,ILS,255;' +
+    'Iranian rial,ï·¼,IRR,255;' +
+    'Iraqi dinar,Ø¹.Ø¯,IQD,255;' +
+    'Israeli new shekel,â‚ª,ILS,255;' +
     'Jamaican dollar,$,JMD,255;' +
-    'Japanese yen,¥,JPY,255;' +
-    'Jordanian dinar,د.ا,JOD,255;' +
-    'Kazakhstani tenge,₸,KZT,255;' +
+    'Japanese yen,Â¥,JPY,255;' +
+    'Jordanian dinar,Ø¯.Ø§,JOD,255;' +
+    'Kazakhstani tenge,â‚¸,KZT,255;' +
     'Kenyan shilling,Sh,KES,255;' +
-    'Kuwaiti dinar,د.ك,KWD,255;' +
-    'Kyrgyzstani som,лв,KGS,255;' +
-    'Lao kip,₭,LAK,255;' +
+    'Kuwaiti dinar,Ø¯.Ùƒ,KWD,255;' +
+    'Kyrgyzstani som,Ð»Ð²,KGS,255;' +
+    'Lao kip,â‚­,LAK,255;' +
     'Latvian lats,Ls,LVL,255;' +
-    'Lebanese pound,ل.ل,LBP,255;' +
+    'Lebanese pound,Ù„.Ù„,LBP,255;' +
     'Lesotho loti,L,LSL,255;' +
     'Liberian dollar,$,LRD,255;' +
-    'Libyan dinar,ل.د,LYD,255;' +
+    'Libyan dinar,Ù„.Ø¯,LYD,255;' +
     'Lithuanian litas,Lt,LTL,255;' +
     'Macanese pataca,P,MOP,255;' +
-    'Macedonian denar,ден,MKD,255;' +
+    'Macedonian denar,Ð´ÐµÐ½,MKD,255;' +
     'Malagasy ariary,Ar,MGA,255;' +
     'Malawian kwacha,MK,MWK,255;' +
     'Malaysian ringgit,RM,MYR,255;' +
-    'Maldivian rufiyaa,ރ.,MVR,255;' +
+    'Maldivian rufiyaa,Þƒ.,MVR,255;' +
     'Mauritanian ouguiya,UM,MRO,255;' +
-    'Mauritian rupee,₨,MUR,255;' +
+    'Mauritian rupee,â‚¨,MUR,255;' +
     'Mexican peso,$,MXN,255;' +
     'Moldovan leu,L,MDL,255;' +
-    'Mongolian tögrög,₮,MNT,255;' +
-    'Moroccan dirham,د.م.,MAD,255;' +
+    'Mongolian tÃ¶grÃ¶g,â‚®,MNT,255;' +
+    'Moroccan dirham,Ø¯.Ù….,MAD,255;' +
     'Mozambican metical,MTn,MZN,255;' +
     'Myanma kyat,K,MMK,255;' +
     'Namibian dollar,$,NAD,255;' +
-    'Nepalese rupee,₨,NPR,255;' +
-    'Netherlands Antillean guilder,ƒ,ANG,255;' +
+    'Nepalese rupee,â‚¨,NPR,255;' +
+    'Netherlands Antillean guilder,Æ’,ANG,255;' +
     'New Taiwan dollar,$,TWD,255;' +
     'New Zealand dollar,$,NZD,255;' +
-    'Nicaraguan córdoba,C$,NIO,255;' +
-    'Nigerian naira,₦,NGN,255;' +
-    'North Korean won,₩,KPW,255;' +
+    'Nicaraguan cÃ³rdoba,C$,NIO,255;' +
+    'Nigerian naira,â‚¦,NGN,255;' +
+    'North Korean won,â‚©,KPW,255;' +
     'Norwegian krone,kr,NOK,255;' +
-    'Omani rial,ر.ع.,OMR,255;' +
-    'Pakistani rupee,₨,PKR,255;' +
+    'Omani rial,Ø±.Ø¹.,OMR,255;' +
+    'Pakistani rupee,â‚¨,PKR,255;' +
     'Panamanian balboa,B/.,PAB,255;' +
     'Papua New Guinean kina,K,PGK,255;' +
-    'Paraguayan guaraní,₲,PYG,255;' +
+    'Paraguayan guaranÃ­,â‚²,PYG,255;' +
     'Peruvian nuevo sol,S/.,PEN,255;' +
-    'Philippine peso,₱,PHP,255;' +
-    'Polish złoty,zł,PLN,255;' +
-    'Qatari riyal,ر.ق,QAR,255;' +
+    'Philippine peso,â‚±,PHP,255;' +
+    'Polish zÅ‚oty,zÅ‚,PLN,255;' +
+    'Qatari riyal,Ø±.Ù‚,QAR,255;' +
     'Romanian leu,L,RON,255;' +
-    'Russian ruble,р.,RUB,255;' +
+    'Russian ruble,Ñ€.,RUB,255;' +
     'Rwandan franc,Fr,RWF,255;' +
-    'Saint Helena pound,£,SHP,255;' +
-    'Salvadoran colón,₡,SVC,255;' +
+    'Saint Helena pound,Â£,SHP,255;' +
+    'Salvadoran colÃ³n,â‚¡,SVC,255;' +
     'Samoan tala,T,WST,255;' +
-    'São Tomé and Príncipe dobra,Db,STD,255;' +
-    'Saudi riyal,ر.س,SAR,255;' +
+    'SÃ£o TomÃ© and PrÃ­ncipe dobra,Db,STD,255;' +
+    'Saudi riyal,Ø±.Ø³,SAR,255;' +
     'Serbian dinar,din.,RSD,255;' +
-    'Seychellois rupee,₨,SCR,255;' +
+    'Seychellois rupee,â‚¨,SCR,255;' +
     'Sierra Leonean leone,Le,SLL,255;' +
     'Singapore dollar,$,SGD,255;' +
     'Solomon Islands dollar,$,SBD,255;' +
     'Somali shilling,Sh,SOS,255;' +
     'South African rand,R,ZAR,255;' +
-    'South Korean won,₩,KRW,255;' +
+    'South Korean won,â‚©,KRW,255;' +
     'Sri Lankan rupee,Rs,LKR,255;' +
-    'Sudanese pound,£,SDG,255;' +
+    'Sudanese pound,Â£,SDG,255;' +
     'Surinamese dollar,$,SRD,255;' +
     'Swazi lilangeni,L,SZL,255;' +
     'Swedish krona,kr,SEK,255;' +
     'Swiss franc,Fr,CHF,255;' +
-    'Syrian pound,£,SYP,255;' +
-    'Tajikistani somoni,ЅМ,TJS,255;' +
+    'Syrian pound,Â£,SYP,255;' +
+    'Tajikistani somoni,Ð…Ðœ,TJS,255;' +
     'Tanzanian shilling,Sh,TZS,255;' +
-    'Thai baht,฿,THB,255;' +
-    'Tongan paʻanga,T$,TOP,255;' +
+    'Thai baht,à¸¿,THB,255;' +
+    'Tongan paÊ»anga,T$,TOP,255;' +
     'Trinidad and Tobago dollar,$,TTD,255;' +
-    'Tunisian dinar,د.ت,TND,255;' +
+    'Tunisian dinar,Ø¯.Øª,TND,255;' +
     'Turkish lira,TL,TRY,255;' +
     'Turkmenistani manat,m,TMT,255;' +
     'Ugandan shilling,Sh,UGX,255;' +
-    'Ukrainian hryvnia,₴,UAH,255;' +
-    'United Arab Emirates dirham,د.إ,AED,255;' +
+    'Ukrainian hryvnia,â‚´,UAH,255;' +
+    'United Arab Emirates dirham,Ø¯.Ø¥,AED,255;' +
     'United States dollar,$,USD,1;' +
     'Uruguayan peso,$,UYU,255;' +
-    'Uzbekistani som,лв,UZS,255;' +
+    'Uzbekistani som,Ð»Ð²,UZS,255;' +
     'Vanuatu vatu,Vt,VUV,255;' +
-    'Venezuelan bolívar,Bs F,VEF,255;' +
-    'Vietnamese đồng,₫,VND,255;' +
+    'Venezuelan bolÃ­var,Bs F,VEF,255;' +
+    'Vietnamese Ä‘á»“ng,â‚«,VND,255;' +
     'West African CFA franc,Fr,XOF,255;' +
-    'Yemeni rial,﷼,YER,255;' +
+    'Yemeni rial,ï·¼,YER,255;' +
     'Zambian kwacha,ZK,ZMK,255;' +
     'Zimbabwean dollar,$,ZWL,255';
 
@@ -2905,7 +2906,51 @@
    * Save invoice to Invoicebus
    */
   var ib_is_saving = false;
+
   var ib_saveInvoice = function() {
+    if (ib_is_saving) return;
+
+    ib_is_saving = true;
+
+    // Add spinner so we know that something is happening
+    $(this)
+        .addClass('ib_disabled_button')
+        .attr('disabled', 'disabled')
+        .find('i.fa')
+        .removeClass('fa-cloud-upload')
+        .addClass('fa-spinner fa-spin');
+
+    // Get the invoice data
+    var invoiceData = ib_getInvoiceData();
+
+    // Send the data to the server using AJAX
+    $.ajax({
+        url: 'save_invoice.php', // URL to your PHP script
+        type: 'POST',
+        data: { invoice_data: JSON.stringify(invoiceData) },
+        success: function(response) {
+            // Handle success response
+            console.log('Invoice saved successfully:', response);
+            // Optionally, you can redirect or show a success message
+        },
+        error: function(xhr, status, error) {
+            // Handle error response
+            console.error('Error saving invoice:', error);
+        },
+        complete: function() {
+            // Reset the button state
+            ib_is_saving = false;
+            $('#ib-save-data-btn')
+                .removeClass('ib_disabled_button')
+                .removeAttr('disabled')
+                .find('i.fa')
+                .removeClass('fa-spinner fa-spin')
+                .addClass('fa-cloud-upload');
+        }
+    });
+};
+
+  /*var ib_saveInvoice = function() {
     if(ib_is_saving)
       return;
 
@@ -2927,7 +2972,7 @@
     $('<form id="ib_save_tamplate_form" style="display:none !important;" action="' + SAVE_URL + '" method="POST" />')
       .append($('<input type="hidden" name="invoice_data" value="' + data + '" />'))
       .appendTo($(document.body)).submit();
-  };
+  }; */
 
   /**
    * Prepare currend data for download
@@ -3023,7 +3068,7 @@
    * Initialize the promo banner if found
    */
   var ib_initPromo = function() {
-    var promo = '@@PROMO'.replace(/\[crlf\]/g, '\r\n');
+    var promo = ''.replace(/\[crlf\]/g, '\r\n');
 
     if(promo)
       $(document.body).before($(promo));
@@ -3090,3 +3135,1228 @@
   });
 
 })();
+
+// ===================================================================
+// Author: Denis Howlett <feedback@isocra.com>
+// WWW: http://www.isocra.com/
+//
+// NOTICE: You may use this code for any purpose, commercial or
+// private, without any further permission from the author. You may
+// remove this notice from your final code if you wish, however we
+// would appreciate it if at least the web site address is kept.
+//
+// You may *NOT* re-distribute this code in any way except through its
+// use. That means, you can include it in your product, or your web
+// site, or any other form where the code is actually being used. You
+// may not put the plain javascript up on your site for download or
+// include it in your javascript libraries for download.
+// If you wish to share this code with others, please just point them
+// to the URL instead.
+//
+// Please DO NOT link directly to this .js files from your site. Copy
+// the files to your server and use them there. Thank you.
+// ===================================================================
+
+
+/**
+ * Encapsulate table Drag and Drop in a class. We'll have this as a Singleton
+ * so we don't get scoping problems.
+ */
+var ib_TableDnD = function(ib_resetRowNumbers) {
+
+  /**
+   * Keep hold of the current table being dragged
+   */
+  var currentTable = null;
+  /**
+   * Keep hold of the current drag object if any
+   */
+  this.dragObject = null;
+  /**
+   * The current mouse offset
+   */
+  this.mouseOffset = null;
+  /**
+   * Remember the old value of Y so that we don't do too much processing
+   */
+  this.oldY = 0;
+
+  /**
+   * Initialise the drag and drop by capturing mouse move events
+   */
+  this.init = function () {
+    var rows = $('[data-iterate="item"]');
+    for (var i = 0; i < rows.length; i++)
+      this.makeDraggable(rows[i]);
+    
+    /**
+     * Capture the onmousemove so that we can see if a row from the current
+     * table if any is being dragged.
+     * @param ev the event (for Firefox and Safari, otherwise we use window.event for IE)
+     */
+    document.onmousemove = function (ev) {
+      if (currentTable && currentTable.dragObject) {
+        ev = ev || window.event;
+        var mousePos = currentTable.mouseCoords(ev);
+        var y = mousePos.y;
+        if (y != currentTable.oldY) {
+          // work out if we're going up or down...
+          var movingDown = y > currentTable.oldY;
+          // update the old value
+          currentTable.oldY = y;
+          // update the style to show we're dragging
+          $(currentTable.dragObject).addClass('ib_dragrow');
+          document.body.style.cursor = "move";
+
+          // If we're over a row then move the dragged row to there so that the user sees the
+          // effect dynamically
+          var currentRow = currentTable.findDropTargetRow(y);
+          if (currentRow) {
+            if (movingDown && currentTable.dragObject != currentRow) {
+              currentTable.dragObject.parentNode.insertBefore(currentTable.dragObject, currentRow.nextSibling);
+            } else if (!movingDown && currentTable.dragObject != currentRow) {
+              currentTable.dragObject.parentNode.insertBefore(currentTable.dragObject, currentRow);
+            }
+          }
+        }
+
+        return false;
+      }
+    };
+
+    /**
+     * Similarly for the mouseup
+     */
+    document.onmouseup = function (ev) {
+      if (currentTable && currentTable.dragObject) {
+        var droppedRow = currentTable.dragObject;
+        // If we have a dragObject, then we need to release it,
+        // The row will already have been moved to the right place so we just reset stuff
+        $(currentTable.dragObject).removeClass('ib_dragrow');
+        
+        currentTable.dragObject = null;
+        // And then call the onDrop method in case anyone wants to do any post processing
+        currentTable.onDrop(droppedRow);
+        currentTable = null; // let go of the table too
+      }
+    };
+  };
+
+  /**
+   * This function is called when you drop a row, so redefine it in your code
+   * to do whatever you want, for example use Ajax to update the server
+   */
+  this.onDrop = function (droppedRow) {
+    document.body.style.cursor = "default";
+    ib_resetRowNumbers();
+  };
+
+  /**
+   * Get the scroll X and Y position
+   */
+  var getScrollXY = function () {
+    var scrOfX = 0, scrOfY = 0;
+    if (typeof (window.pageYOffset) == 'number') {
+      //Netscape compliant
+      scrOfY = window.pageYOffset;
+      scrOfX = window.pageXOffset;
+    } else if (document.body && (document.body.scrollLeft || document.body.scrollTop)) {
+      //DOM compliant
+      scrOfY = document.body.scrollTop;
+      scrOfX = document.body.scrollLeft;
+    } else if (document.documentElement && (document.documentElement.scrollLeft || document.documentElement.scrollTop)) {
+      //IE6 standards compliant mode
+      scrOfY = document.documentElement.scrollTop;
+      scrOfX = document.documentElement.scrollLeft;
+    }
+    return [scrOfX, scrOfY];
+  };
+
+  /**
+   * Get the mouse coordinates from the event (allowing for browser differences)
+   */
+  this.mouseCoords = function (ev) {
+    if (ev.pageX || ev.pageY) {
+      return { x: ev.pageX, y: ev.pageY };
+    }
+    return {
+      x: ev.clientX + getScrollXY()[0],
+      y: ev.clientY + getScrollXY()[1]
+    };
+  };
+
+  /**
+   * Given a target element and a mouse event, get the mouse offset from that element.
+   * To do this we need the element's position and the mouse position
+   */
+  this.getMouseOffset = function (target, ev) {
+    e = ev || window.event;
+
+    var docPos = $(target).offset();
+    var mousePos = this.mouseCoords(e);
+    return { x: mousePos.x - docPos.left, y: mousePos.y - docPos.top };
+  };
+
+  /**
+   * Get the source element from an event in a way that works for IE and Firefox and Safari
+   * @param evt the source event for Firefox (but not IE--IE uses window.event)
+   */
+  var getEventSource = function (evt) {
+    if (window.event) {
+      evt = window.event; // For IE
+      return evt.srcElement;
+    } else {
+      return evt.target; // For Firefox
+    }
+  };
+
+  /**
+   * Take an item and add an onmousedown method so that we can make it draggable
+   */
+  this.makeDraggable = function (item) {
+    if (!item) return;
+    var self = this; // Keep the context of the TableDnd inside the function
+    $(item).find('.ib_move').on('mousedown', function (ev) {
+      // Need to check to see if we are an input or not, if we are an input, then return true to allow normal processing
+      var target = getEventSource(ev);
+      if (target.tagName == 'INPUT' || target.tagName == 'SELECT' || target.tagName == 'TEXTAREA') return true;
+      currentTable = self;
+      self.dragObject = item;
+      self.mouseOffset = self.getMouseOffset(item, ev);
+      return false;
+    });
+    $(item).find('.ib_move').css("cursor", "move");
+  };
+
+  /**
+   * We're only worried about the y position really, because we can only move rows up and down
+   */
+  this.findDropTargetRow = function (y) {
+    var rows = $('[data-iterate="item"]');
+    for (var i = 0; i < rows.length; i++) {
+      var row = rows[i];
+      var rowY = $(row).offset().top;
+      var rowHeight = parseInt(row.offsetHeight);
+      if (row.offsetHeight === 0) {
+        rowY = $(row.firstChild).offset().top;
+        rowHeight = parseInt(row.firstChild.offsetHeight);
+      }
+      // Because we always have to insert before, we need to offset the height a bit
+      if ((y > rowY - rowHeight) && (y < (rowY + rowHeight))) {
+        // that's the row we're over
+        return row;
+      }
+    }
+    return null;
+  };
+
+};
+
+/* =========================================================
+ * bootstrap-datepicker.js 
+ * http://www.eyecon.ro/bootstrap-datepicker
+ * =========================================================
+ * Copyright 2012 Stefan Petre
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * ========================================================= */
+
+var ib_loadBootstrapDatepicker = function() {
+
+  // Picker object
+  var Datepicker = function(element, options) {
+    this.element = $(element);
+    this.format = DPGlobal.parseFormat(options.format||this.element.data('date-format')||'mm/dd/yyyy');
+    this.picker = $(DPGlobal.template)
+                      .appendTo('body')
+                      .on({
+                        click: $.proxy(this.click, this)//,
+                        //mousedown: $.proxy(this.mousedown, this)
+                      });
+    this.isInput = this.element.is('input');
+    this.component = this.element.is('.date') ? this.element.find('.add-on') : false;
+    
+    if (this.isInput) {
+      this.element.on({
+        focus: $.proxy(this.show, this),
+        //blur: $.proxy(this.hide, this),
+        keyup: $.proxy(this.update, this)
+      });
+    } else {
+      if (this.component){
+        this.component.on('click', $.proxy(this.show, this));
+      } else {
+        this.element.on('click', $.proxy(this.show, this));
+      }
+    }
+  
+    this.minViewMode = options.minViewMode||this.element.data('date-minviewmode')||0;
+    if (typeof this.minViewMode === 'string') {
+      switch (this.minViewMode) {
+        case 'months':
+          this.minViewMode = 1;
+          break;
+        case 'years':
+          this.minViewMode = 2;
+          break;
+        default:
+          this.minViewMode = 0;
+          break;
+      }
+    }
+    this.viewMode = options.viewMode||this.element.data('date-viewmode')||0;
+    if (typeof this.viewMode === 'string') {
+      switch (this.viewMode) {
+        case 'months':
+          this.viewMode = 1;
+          break;
+        case 'years':
+          this.viewMode = 2;
+          break;
+        default:
+          this.viewMode = 0;
+          break;
+      }
+    }
+    this.startViewMode = this.viewMode;
+    this.weekStart = options.weekStart||this.element.data('date-weekstart')||0;
+    this.weekEnd = this.weekStart === 0 ? 6 : this.weekStart - 1;
+    this.onRender = options.onRender;
+    this.fillDow();
+    this.fillMonths();
+    this.update();
+    this.showMode();
+  };
+  
+  Datepicker.prototype = {
+    constructor: Datepicker,
+    
+    show: function(e) {
+      this.picker.show();
+      this.height = this.component ? this.component.outerHeight() : this.element.outerHeight();
+      this.place();
+      $(window).on('resize', $.proxy(this.place, this));
+      if (e ) {
+        e.stopPropagation();
+        e.preventDefault();
+      }
+      if (!this.isInput) {
+      }
+      var that = this;
+      $(document).on('mousedown', function(ev){
+        if ($(ev.target).closest('.datepicker').length === 0) {
+          that.hide();
+        }
+      });
+      this.element.trigger({
+        type: 'show',
+        date: this.date
+      });
+      this.fill();
+    },
+    
+    hide: function(){
+      this.picker.hide();
+      $(window).off('resize', this.place);
+      this.viewMode = this.startViewMode;
+      this.showMode();
+      if (!this.isInput) {
+        $(document).off('mousedown', this.hide);
+      }
+      //this.set();
+      this.element.trigger({
+        type: 'hide',
+        date: this.date
+      });
+    },
+    
+    set: function() {
+      var formated = DPGlobal.formatDate(this.date, this.format);
+      if (!this.isInput) {
+        if (this.component){
+          this.element.find('input').prop('value', formated);
+        }
+        this.element.data('date', formated);
+      } else {
+        this.element.prop('value', formated);
+      }
+    },
+    
+    setValue: function(newDate) {
+      if (typeof newDate === 'string') {
+        this.date = DPGlobal.parseDate(newDate, this.format);
+      } else {
+        this.date = new Date(newDate);
+      }
+      this.set();
+      this.viewDate = new Date(this.date.getFullYear(), this.date.getMonth(), 1, 0, 0, 0, 0);
+      this.fill();
+    },
+    
+    setFormat: function(newFormat) {
+      this.format = DPGlobal.parseFormat(newFormat);
+      var formated = DPGlobal.formatDate(this.date, this.format);
+      if (!this.isInput) {
+        if (this.component){
+          this.element.find('input').prop('value', formated);
+        }
+        this.element.data('date', formated);
+      } else {
+        this.element.prop('value', formated);
+      }
+      this.set();
+      this.viewDate = new Date(this.date.getFullYear(), this.date.getMonth(), 1, 0, 0, 0, 0);
+      this.fill();
+    },
+    
+    place: function(){
+      var offset = this.component ? this.component.offset() : this.element.offset();
+      this.picker.css({
+        top: offset.top + this.height,
+        left: offset.left + (this.element.width() / 2)
+      });
+    },
+    
+    update: function(newDate){
+      this.date = DPGlobal.parseDate(
+        typeof newDate === 'string' ? newDate : (this.isInput ? this.element.prop('value') : this.element.data('date')),
+        this.format
+      );
+      this.viewDate = new Date(this.date.getFullYear(), this.date.getMonth(), 1, 0, 0, 0, 0);
+      this.fill();
+    },
+    
+    fillDow: function(){
+      var dowCnt = this.weekStart;
+      var html = '<tr>';
+      while (dowCnt < this.weekStart + 7) {
+        html += '<th class="dow">'+DPGlobal.dates.daysMin[(dowCnt++)%7]+'</th>';
+      }
+      html += '</tr>';
+      this.picker.find('.datepicker-days thead').append(html);
+    },
+    
+    fillMonths: function(){
+      var html = '';
+      var i = 0;
+      while (i < 12) {
+        html += '<ib-span class="month">'+DPGlobal.dates.monthsShort[i++]+'</ib-span>';
+      }
+      this.picker.find('.datepicker-months td').append(html);
+    },
+    
+    fill: function() {
+      var d = new Date(this.viewDate),
+        year = d.getFullYear(),
+        month = d.getMonth(),
+        currentDate = this.date.valueOf();
+      this.picker.find('.datepicker-days th:eq(1)')
+            .text(DPGlobal.dates.months[month]+' '+year);
+      var prevMonth = new Date(year, month-1, 28,0,0,0,0),
+        day = DPGlobal.getDaysInMonth(prevMonth.getFullYear(), prevMonth.getMonth());
+      prevMonth.setDate(day);
+      prevMonth.setDate(day - (prevMonth.getDay() - this.weekStart + 7)%7);
+      var nextMonth = new Date(prevMonth);
+      nextMonth.setDate(nextMonth.getDate() + 42);
+      nextMonth = nextMonth.valueOf();
+      var html = [];
+      var clsName,
+        prevY,
+        prevM;
+      while(prevMonth.valueOf() < nextMonth) {
+        if (prevMonth.getDay() === this.weekStart) {
+          html.push('<tr>');
+        }
+        clsName = this.onRender(prevMonth);
+        prevY = prevMonth.getFullYear();
+        prevM = prevMonth.getMonth();
+        if ((prevM < month &&  prevY === year) ||  prevY < year) {
+          clsName += ' old';
+        } else if ((prevM > month && prevY === year) || prevY > year) {
+          clsName += ' new';
+        }
+        if (prevMonth.valueOf() === currentDate) {
+          clsName += ' active';
+        }
+        html.push('<td class="day '+clsName+'">'+prevMonth.getDate() + '</td>');
+        if (prevMonth.getDay() === this.weekEnd) {
+          html.push('</tr>');
+        }
+        prevMonth.setDate(prevMonth.getDate()+1);
+      }
+      this.picker.find('.datepicker-days tbody').empty().append(html.join(''));
+      var currentYear = this.date.getFullYear();
+      
+      var months = this.picker.find('.datepicker-months')
+            .find('th:eq(1)')
+              .text(year)
+              .end()
+            .find('ib-span').removeClass('active');
+      if (currentYear === year) {
+        months.eq(this.date.getMonth()).addClass('active');
+      }
+      
+      html = '';
+      year = parseInt(year/10, 10) * 10;
+      var yearCont = this.picker.find('.datepicker-years')
+                .find('th:eq(1)')
+                  .text(year + '-' + (year + 9))
+                  .end()
+                .find('td');
+      year -= 1;
+      for (var i = -1; i < 11; i++) {
+        html += '<ib-span class="year'+(i === -1 || i === 10 ? ' old' : '')+(currentYear === year ? ' active' : '')+'">'+year+'</ib-span>';
+        year += 1;
+      }
+      yearCont.html(html);
+    },
+    
+    click: function(e) {
+      e.stopPropagation();
+      e.preventDefault();
+      var target = $(e.target).closest('ib-span, td, th');
+      if (target.length === 1) {
+        var day, month, year;
+        switch(target[0].nodeName.toLowerCase()) {
+          case 'th':
+            switch(target[0].className) {
+              case 'switch':
+                this.showMode(1);
+                break;
+              case 'prev':
+              case 'next':
+                this.viewDate['set'+DPGlobal.modes[this.viewMode].navFnc].call(
+                  this.viewDate,
+                  this.viewDate['get'+DPGlobal.modes[this.viewMode].navFnc].call(this.viewDate) + 
+                  DPGlobal.modes[this.viewMode].navStep * (target[0].className === 'prev' ? -1 : 1)
+                );
+                this.fill();
+                this.set();
+                break;
+            }
+            break;
+          case 'ib-span':
+            if (target.is('.month')) {
+              month = target.parent().find('ib-span').index(target);
+              this.viewDate.setMonth(month);
+            } else {
+              year = parseInt(target.text(), 10)||0;
+              this.viewDate.setFullYear(year);
+            }
+            if (this.viewMode !== 0) {
+              this.date = new Date(this.viewDate);
+              this.element.trigger({
+                type: 'changeDate',
+                date: this.date,
+                viewMode: DPGlobal.modes[this.viewMode].clsName
+              });
+            }
+            this.showMode(-1);
+            this.fill();
+            this.set();
+            break;
+          case 'td':
+            if (target.is('.day') && !target.is('.disabled')){
+              day = parseInt(target.text(), 10)||1;
+              month = this.viewDate.getMonth();
+              if (target.is('.old')) {
+                month -= 1;
+              } else if (target.is('.new')) {
+                month += 1;
+              }
+              year = this.viewDate.getFullYear();
+              this.date = new Date(year, month, day,0,0,0,0);
+              this.viewDate = new Date(year, month, Math.min(28, day),0,0,0,0);
+              this.fill();
+              this.set();
+              this.element.trigger({
+                type: 'changeDate',
+                date: this.date,
+                viewMode: DPGlobal.modes[this.viewMode].clsName
+              });
+            }
+            break;
+        }
+      }
+    },
+    
+    mousedown: function(e){
+      e.stopPropagation();
+      e.preventDefault();
+    },
+    
+    showMode: function(dir) {
+      if (dir) {
+        this.viewMode = Math.max(this.minViewMode, Math.min(2, this.viewMode + dir));
+      }
+      this.picker.find('>div').hide().filter('.datepicker-'+DPGlobal.modes[this.viewMode].clsName).show();
+    }
+  };
+  
+  $.fn.datepicker = function ( option, val ) {
+    return this.each(function () {
+      var $this = $(this),
+        data = $this.data('datepicker'),
+        options = typeof option === 'object' && option;
+      if (!data) {
+        $this.data('datepicker', (data = new Datepicker(this, $.extend({}, $.fn.datepicker.defaults,options))));
+      }
+      if (typeof option === 'string') data[option](val);
+    });
+  };
+
+  $.fn.datepicker.defaults = {
+    onRender: function(date) {
+      return '';
+    }
+  };
+  $.fn.datepicker.Constructor = Datepicker;
+  
+  var DPGlobal = {
+    modes: [
+      {
+        clsName: 'days',
+        navFnc: 'Month',
+        navStep: 1
+      },
+      {
+        clsName: 'months',
+        navFnc: 'FullYear',
+        navStep: 1
+      },
+      {
+        clsName: 'years',
+        navFnc: 'FullYear',
+        navStep: 10
+    }],
+    dates:{
+      days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      daysShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+      daysMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
+      months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+      monthsShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    },
+    isLeapYear: function (year) {
+      return (((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0));
+    },
+    getDaysInMonth: function (year, month) {
+      return [31, (DPGlobal.isLeapYear(year) ? 29 : 28), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month];
+    },
+    parseFormat: function(format){
+      var separator = format.match(/[.\/\-\s].*?/),
+        parts = format.split(/\W+/);
+      if (!separator || !parts || parts.length === 0){
+        throw new Error("Invalid date format.");
+      }
+      return {separator: separator, parts: parts};
+    },
+    parseDate: function(date, format) {
+      var parts = date.split(format.separator), val;
+      date = new Date();
+          
+      date.setHours(0);
+      date.setMinutes(0);
+      date.setSeconds(0);
+      date.setMilliseconds(0);
+      if (parts.length === format.parts.length) {
+        var year = date.getFullYear(), day = date.getDate(), month = date.getMonth();
+        for (var i=0, cnt = format.parts.length; i < cnt; i++) {
+          val = parseInt(parts[i], 10)||1;
+          switch(format.parts[i]) {
+            case 'dd':
+            case 'd':
+              day = val;
+              date.setDate(val);
+              break;
+            case 'mm':
+            case 'm':
+              month = val - 1;
+              date.setMonth(val - 1);
+              break;
+            case 'yy':
+              year = 2000 + val;
+              date.setFullYear(2000 + val);
+              break;
+            case 'yyyy':
+              year = val;
+              date.setFullYear(val);
+              break;
+          }
+        }
+        date = new Date(year, month, day, 0 ,0 ,0);
+      }
+      return date;
+    },
+    formatDate: function(date, format){
+      var val = {
+        d: date.getDate(),
+        m: date.getMonth() + 1,
+        yy: date.getFullYear().toString().substring(2),
+        yyyy: date.getFullYear()
+      };
+      val.dd = (val.d < 10 ? '0' : '') + val.d;
+      val.mm = (val.m < 10 ? '0' : '') + val.m;
+      date = [];
+      for (var i=0, cnt = format.parts.length; i < cnt; i++) {
+        date.push(val[format.parts[i]]);
+      }
+      return date.join(format.separator);
+    },
+    headTemplate: '<thead>'+
+                    '<tr>'+
+                      '<th class="prev">&lsaquo;</th>'+
+                      '<th colspan="5" class="switch"></th>'+
+                      '<th class="next">&rsaquo;</th>'+
+                    '</tr>'+
+                  '</thead>',
+    contTemplate: '<tbody><tr><td colspan="7"></td></tr></tbody>'
+  };
+  DPGlobal.template = '<div class="datepicker dropdown-menu">'+
+                        '<div class="datepicker-days">'+
+                          '<table class=" table-condensed">'+
+                            DPGlobal.headTemplate+
+                            '<tbody></tbody>'+
+                          '</table>'+
+                        '</div>'+
+                        '<div class="datepicker-months">'+
+                          '<table class="table-condensed">'+
+                            DPGlobal.headTemplate+
+                            DPGlobal.contTemplate+
+                          '</table>'+
+                        '</div>'+
+                        '<div class="datepicker-years">'+
+                          '<table class="table-condensed">'+
+                            DPGlobal.headTemplate+
+                            DPGlobal.contTemplate+
+                          '</table>'+
+                        '</div>'+
+                      '</div>';
+
+};
+
+/* =============================================================
+ * bootstrap3-typeahead.js v3.0.3
+ * https://github.com/bassjobsen/Bootstrap-3-Typeahead
+ * =============================================================
+ * Original written by @mdo and @fat
+ * =============================================================
+ * Copyright 2014 Bass Jobsen @bassjobsen
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * ============================================================ */
+
+var ib_loadBootstrapTypeahead = function() {
+
+  "use strict";
+  // jshint laxcomma: true
+
+  /* TYPEAHEAD PUBLIC CLASS DEFINITION
+  * ================================= */
+
+  var Typeahead = function (element, options) {
+    this.$element = $(element);
+    this.options = $.extend({}, $.fn.typeahead.defaults, options);
+    this.matcher = this.options.matcher || this.matcher;
+    this.sorter = this.options.sorter || this.sorter;
+    this.select = this.options.select || this.select;
+    this.autoSelect = typeof this.options.autoSelect == 'boolean' ? this.options.autoSelect : true;
+    this.highlighter = this.options.highlighter || this.highlighter;
+    this.updater = this.options.updater || this.updater;
+    this.source = this.options.source;
+    this.delay = typeof this.options.delay == 'number' ? this.options.delay : 250;
+    this.$menu = $(this.options.menu);
+    this.shown = false;
+    this.listen();
+    this.showHintOnFocus = typeof this.options.showHintOnFocus == 'boolean' ? this.options.showHintOnFocus : false;
+  };
+
+  Typeahead.prototype = {
+
+    constructor: Typeahead,
+
+    select: function () {
+      var val = this.$menu.find('.active').data('value');
+      if(this.autoSelect || val) {
+        this.$element
+          .text(this.updater(val))
+          .change();
+      }
+      return this.hide();
+    },
+
+    updater: function (item) {
+      return item;
+    },
+
+    setSource: function (source) {
+      this.source = source;
+    },
+
+    show: function () {
+      var pos = $.extend({}, this.$element.offset(), {
+        height: this.$element[0].offsetHeight
+      }), scrollHeight;
+
+      scrollHeight = typeof this.options.scrollHeight == 'function' ?
+          this.options.scrollHeight.call() :
+          this.options.scrollHeight;
+
+      this.$menu
+        //.insertAfter(this.$element)
+        .appendTo(document.body)
+        .css({
+          top: pos.top + pos.height + scrollHeight,
+          left: pos.left
+        })
+        .show();
+
+      this.shown = true;
+      return this;
+    },
+
+    hide: function () {
+      this.$menu.hide();
+      this.shown = false;
+      return this;
+    },
+
+    lookup: function (query) {
+      var items;
+      if (typeof(query) != 'undefined' && query !== null) {
+        this.query = query;
+      } else {
+        this.query = this.$element.text() ||  '';
+      }
+
+      if (this.query.length < this.options.minLength) {
+        return this.shown ? this.hide() : this;
+      }
+
+      var worker = $.proxy(function() {
+        items = $.isFunction(this.source) ? this.source(this.query, $.proxy(this.process, this)) : this.source;
+        if (items) {
+          this.process(items);
+        }
+      }, this);
+
+      clearTimeout(this.lookupWorker);
+      this.lookupWorker = setTimeout(worker, this.delay);
+    },
+
+    process: function (items) {
+      var that = this;
+
+      items = $.grep(items, function (item) {
+        return that.matcher(item);
+      });
+
+      items = this.sorter(items);
+
+      if (!items.length) {
+        return this.shown ? this.hide() : this;
+      }
+
+      if (this.options.items == 'all') {
+        return this.render(items).show();
+      } else {
+        return this.render(items.slice(0, this.options.items)).show();
+      }
+    },
+
+    matcher: function (item) {
+      return ~item.toLowerCase().indexOf(this.query.toLowerCase());
+    },
+
+    sorter: function (items) {
+      var beginswith = [],
+          caseSensitive = [],
+          caseInsensitive = [],
+          item;
+
+      while ((item = items.shift())) {
+        if (!item.toLowerCase().indexOf(this.query.toLowerCase())) beginswith.push(item);
+        else if (~item.indexOf(this.query)) caseSensitive.push(item);
+        else caseInsensitive.push(item);
+      }
+
+      return beginswith.concat(caseSensitive, caseInsensitive);
+    },
+
+    highlighter: function (item) {
+      var query = this.query.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, '\\$&');
+      return item.replace(new RegExp('(' + query + ')', 'ig'), function ($1, match) {
+        return '<strong>' + match + '</strong>';
+      });
+    },
+
+    render: function (items) {
+      var that = this;
+
+      items = $(items).map(function (i, item) {
+        i = $(that.options.item).data('value', item);
+        i.find('a').html(that.highlighter(item));
+        return i[0];
+      });
+
+      if (this.autoSelect) {
+        items.first().addClass('active');
+      }
+      this.$menu.html(items);
+      return this;
+    },
+
+    next: function (event) {
+      var active = this.$menu.find('.active').removeClass('active'),
+          next = active.next();
+
+      if (!next.length) {
+        next = $(this.$menu.find('li')[0]);
+      }
+
+      next.addClass('active');
+    },
+
+    prev: function (event) {
+      var active = this.$menu.find('.active').removeClass('active'),
+          prev = active.prev();
+
+      if (!prev.length) {
+        prev = this.$menu.find('li').last();
+      }
+
+      prev.addClass('active');
+    },
+
+    listen: function () {
+      this.$element
+        .on('focus',    $.proxy(this.focus,     this))
+        .on('blur',     $.proxy(this.blur,      this))
+        .on('keypress', $.proxy(this.keypress,  this))
+        .on('keyup',    $.proxy(this.keyup,     this));
+
+      if (this.eventSupported('keydown')) {
+        this.$element.on('keydown', $.proxy(this.keydown, this));
+      }
+
+      this.$menu
+        .on('click', $.proxy(this.click, this))
+        .on('mouseenter', 'li', $.proxy(this.mouseenter, this))
+        .on('mouseleave', 'li', $.proxy(this.mouseleave, this));
+    },
+    
+    destroy : function () {
+      this.$element.data('typeahead',null);
+      this.$element
+        .off('focus')
+        .off('blur')
+        .off('keypress')
+        .off('keyup');
+
+      if (this.eventSupported('keydown')) {
+        this.$element.off('keydown');
+      }
+
+      this.$menu.remove();
+    },
+    
+    eventSupported: function(eventName) {
+      var isSupported = eventName in this.$element;
+      if (!isSupported) {
+        this.$element.setAttribute(eventName, 'return;');
+        isSupported = typeof this.$element[eventName] === 'function';
+      }
+      return isSupported;
+    },
+
+    move: function (e) {
+      if (!this.shown) return;
+
+      switch(e.keyCode) {
+        case 9: // tab
+        case 13: // enter
+        case 27: // escape
+          e.preventDefault();
+          break;
+
+        case 38: // up arrow
+          e.preventDefault();
+          this.prev();
+          break;
+
+        case 40: // down arrow
+          e.preventDefault();
+          this.next();
+          break;
+      }
+
+      e.stopPropagation();
+    },
+
+    keydown: function (e) {
+      this.suppressKeyPressRepeat = ~$.inArray(e.keyCode, [40,38,9,13,27]);
+      if (!this.shown && e.keyCode == 40) {
+        this.lookup("");
+      } else {
+        this.move(e);
+      }
+    },
+
+    keypress: function (e) {
+      if (this.suppressKeyPressRepeat) return;
+      this.move(e);
+    },
+
+    keyup: function (e) {
+      switch(e.keyCode) {
+        case 40: // down arrow
+        case 38: // up arrow
+        case 16: // shift
+        case 17: // ctrl
+        case 18: // alt
+          break;
+
+        case 9: // tab
+        case 13: // enter
+          if (!this.shown) return;
+          this.select();
+          break;
+
+        case 27: // escape
+          if (!this.shown) return;
+          this.hide();
+          break;
+        default:
+          this.lookup();
+      }
+
+      e.stopPropagation();
+      e.preventDefault();
+    },
+
+    focus: function (e) {
+      if (!this.focused) {
+        this.focused = true;
+        if (this.options.minLength === 0 && !this.$element.text() || this.options.showHintOnFocus) {
+          this.lookup();
+        }
+      }
+    },
+
+    blur: function (e) {
+      this.focused = false;
+      if (!this.mousedover && this.shown) this.hide();
+    },
+
+    click: function (e) {
+      e.stopPropagation();
+      e.preventDefault();
+      this.select();
+      this.$element.focus();
+    },
+
+    mouseenter: function (e) {
+      this.mousedover = true;
+      this.$menu.find('.active').removeClass('active');
+      $(e.currentTarget).addClass('active');
+    },
+
+    mouseleave: function (e) {
+      this.mousedover = false;
+      if (!this.focused && this.shown) this.hide();
+    }
+
+  };
+
+  /* TYPEAHEAD PLUGIN DEFINITION
+  * =========================== */
+
+  var old = $.fn.typeahead;
+
+  $.fn.typeahead = function (option) {
+  var arg = arguments;
+    return this.each(function () {
+      var $this = $(this),
+          data = $this.data('typeahead'),
+          options = typeof option == 'object' && option;
+      if (!data) $this.data('typeahead', (data = new Typeahead(this, options)));
+      if (typeof option == 'string') {
+        if (arg.length > 1) {
+          data[option].apply(data, Array.prototype.slice.call(arg ,1));
+        } else {
+          data[option]();
+        }
+      }
+    });
+  };
+
+  $.fn.typeahead.defaults = {
+    source: [],
+    items: 8,
+    menu: '<ul class="typeahead dropdown-menu"></ul>',
+    item: '<li><a href="#"></a></li>',
+    minLength: 1,
+    scrollHeight: 0,
+    autoSelect: true
+  };
+
+  $.fn.typeahead.Constructor = Typeahead;
+
+  /* TYPEAHEAD NO CONFLICT
+  * =================== */
+
+  $.fn.typeahead.noConflict = function () {
+    $.fn.typeahead = old;
+    return this;
+  };
+
+  /* TYPEAHEAD DATA-API
+  * ================== */
+
+  $(document).on('focus.typeahead.data-api', '[data-provide="typeahead"]', function (e) {
+    var $this = $(this);
+    if ($this.data('typeahead')) return;
+    $this.typeahead($this.data());
+  });
+
+};
+
+// Used from https://github.com/sindresorhus/strip-indent and https://github.com/sindresorhus/multiline
+
+var ib_stripIndent = function (str) {
+  var match = str.match(/^[ \t]*(?=\S)/gm);
+
+  if (!match) {
+    return str;
+  }
+
+  var indent = Math.min.apply(Math, match.map(function (el) {
+    return el.length;
+  }));
+
+  var re = new RegExp('^[ \\t]{' + indent + '}', 'gm');
+
+  return indent > 0 ? str.replace(re, '') : str;
+};
+
+// start matching after: comment start block => ! or @preserve => optional whitespace => newline
+// stop matching before: last newline => optional whitespace => comment end block
+var reCommentContents = /\/\*!?(?:\@preserve)?[ \t]*(?:\r\n|\n)([\s\S]*?)(?:\r\n|\n)[ \t]*\*\//;
+
+var ib_multiline = function (fn) {
+  if (typeof fn !== 'function') {
+    throw new TypeError('Expected a function');
+  }
+
+  var match = reCommentContents.exec(fn.toString());
+
+  if (!match) {
+    throw new TypeError('Multiline comment missing.');
+  }
+
+  return match[1];
+};
+
+ib_multiline.stripIndent = function (fn) {
+  return ib_stripIndent(ib_multiline(fn));
+};
+
+var ib_parseData = function(data) {
+  var d, i, j, line, custom_data, items = [], parsed_data = {};
+
+  d = data.split('\n');
+
+  function trim(val) {
+    return val.trim();
+  }
+
+  for(i = 0; i < d.length; i++)
+  {
+    line = d[i].trim();
+
+    if(line == '#') // this is comment, ignore it
+      continue;
+
+    if(line[0] == '[') // this is property, the value is the next line
+    {
+      var property = line.substring(1, line.length - 1);
+      parsed_data[property] = d[i + 1].replace(/\r|\n/g, ''); // clean the new line characters
+    }
+
+    if(line == '[default_columns]') // this is special case for [default_columns] because the value should be an array
+    {
+      parsed_data.default_columns = parsed_data.default_columns.split(',').map(trim);
+    }
+
+    if(line == '[items]') // this is special case for [items] because the value is multiline
+    {
+      j = i + 1;
+      line = d[j].replace(/\r|\n/g, ''); // clean the new line characters
+      while(line !== '')
+      {
+        var item = line.split('@||@');
+        items.push({
+          item_description : item[0],
+          item_quantity    : item[1],
+          item_price       : item[2],
+          item_discount    : item[3],
+          item_tax         : item[4]
+        });
+        j++;
+        line = d[j].trim();
+      }
+
+      parsed_data.items = items;
+    }
+
+    if(line == '[document_custom]') // this is special case for [document_custom] because the value is multiline
+    {
+      j = i + 1;
+      line = d[j].replace(/\r|\n/g, ''); // clean the new line characters
+      while(line !== '')
+      {
+        custom_data = line.split('@||@');
+        parsed_data['{document_custom_' + custom_data[0] + '}'] = custom_data[1];
+        j++;
+        line = d[j].trim();
+      }
+    }
+
+    if(line == '[client_custom]') // this is special case for [client_custom] because the value is multiline
+    {
+      j = i + 1;
+      line = d[j].replace(/\r|\n/g, ''); // clean the new line characters
+      while(line !== '')
+      {
+        custom_data = line.split('@||@');
+        parsed_data['{client_custom_' + custom_data[0] + '}'] =  custom_data[1];
+        j++;
+        line = d[j].trim();
+      }
+    }
+  }
+
+  delete parsed_data.document_custom;
+  delete parsed_data.client_custom;
+
+  return parsed_data;
+};
